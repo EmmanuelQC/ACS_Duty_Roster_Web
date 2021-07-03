@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Duty Student Roster</title>
+</head>
+<body style="background-color: black; color: white;">
+    <h1 style="color: dodgerblue; padding: 7px; text-align: center">
+        Duty Roster Program
+    </h1>
+    <button type="button" class="btn btn-light" style="padding: 10px;"><a href="/">Allocate</a></button>
+
+    <h3 style="padding: 10px">
+        Input Students:
+    </h3>
+    <div class="input-group mb-3" style="padding: 12px; width: 500px">
+      <label class="input-group-text" for="inputGroupFile01">Upload</label>
+      <input type="file" class="form-control" id="inputGroupFile01">
+    </div>
+    <div class="input-group mb-3" align="end" style="padding: 12px; width: 500px">
+        <input type="text" class="form-control" placeholder="Students name" aria-label="Students name" aria-describedby="button-add">
+        <button class="btn btn-outline-secondary" type="button" id="button-add">Submit</button>
+        <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Christian</a></li>
+            <li><a class="dropdown-item" href="#">Non-Christian</a></li>
+        </ul>
+        <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Singaporean</a></li>
+            <li><a class="dropdown-item" href="#">Non-Singaporean</a></li>
+        </ul>
+    </div>
+    <h4>Excos:</h4>
+    {{ ex }}
+    <p style="padding: 10px">
+        {% for d in ds %}
+            <h3 style="padding: 10px">{{ d }}</h3>
+            {% for i in db %}
+                <h6 style="padding: 10px; color:yellow">
+                    {{ i }} : {{ db[i] }}
+                </h6>
+
+            {% endfor %}
+        {% endfor %}
+    </p>
+    
+    <!-- Random Output {{ db }} -->
+
+</body>
+</html>
