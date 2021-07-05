@@ -7,8 +7,9 @@ app = Flask(__name__)
 @app.route('/')
 def main():
     # r_num = random.randint(1, 10)
-    allocation(excos, schoolPre, housePre)
-    return render_template('index.html', db=duties, ds=days, ex=excos)
+    return "Hello Heroku, test"
+    # allocation(excos, schoolPre, housePre)
+    # return render_template('index.html', db=duties, ds=days, ex=excos)
 
 
 if __name__ == '__main__':
